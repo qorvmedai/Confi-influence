@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html class="scroll-smooth bg-[#0A0604] overflow-x-hidden w-full" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>Influence | Confi-influece</title>
+    <meta property="og:image" content="https://qormedai.github.io/confi-influece/in.png">
+    <meta property="og:title" content="Confi-influence | Exclusive WhatsApp Influencing">
+    
+    <!-- Modern Sans-Serif Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBase: '#0A0604',     /* Deepest Brown/Black */
+                        panelDark: '#140D09',    /* Slightly lighter panel */
+                        panelBorder: '#2A1B13',  
+                        goldAccent: '#E5B05C',   
+                        goldLight: '#F9D89C',    
+                        waGreen: '#25D366',      /* WhatsApp Green */
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-medium': 'float 6s ease-in-out infinite reverse',
+                        'float-fast': 'float 4s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'slide-up-fade': 'slideUpFade 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(229, 176, 92, 0.2)' },
+                            '50%': { boxShadow: '0 0 40px rgba(229, 176, 92, 0.6)' },
+                        },
+                        slideUpFade: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #FFFFFF; overflow-x: hidden; width: 100%; }
+        
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0A0604; }
+        ::-webkit-scrollbar-thumb { background: #2A1B13; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E5B05C; }
+        
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(20, 13, 9, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-gold {
+            background: linear-gradient(135deg, rgba(229, 176, 92, 0.1) 0%, rgba(20, 13, 9, 0.8) 100%);
+            border: 1px solid rgba(229, 176, 92, 0.4);
+        }
+
+        /* Gold Gradient Text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #F9D89C 0%, #E5B05C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Simulated Notifications */
+        .mock-notification {
+            opacity: 0;
+            animation: popIn 6s infinite;
+        }
+        .mock-notification:nth-child(1) { animation-delay: 0s; }
+        .mock-notification:nth-child(2) { animation-delay: 2s; }
+        .mock-notification:nth-child(3) { animation-delay: 4s; }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+            10%, 80% { opacity: 1; transform: translateY(0) scale(1); }
+            90%, 100% { opacity: 0; transform: translateY(-20px) scale(0.9); }
+        }
+
+        /* Timeline Dot */
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #E5B05C;
+            border: 4px solid #140D09;
+            box-shadow: 0 0 15px rgba(229, 176, 92, 0.6);
+        }
+
+        /* Clean FAQ Accordion */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-darkBase selection:bg-goldAccent selection:text-darkBase antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <!-- Brown/Gold Gradients -->
+            <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-goldAccent/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#3D2314]/40 rounded-full blur-[100px] pointer-events-none"></div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute top-[20%] left-[10%] w-3 h-3 bg-goldAccent rounded-full shadow-[0_0_15px_#E5B05C] animate-float-slow"></div>
+            <div class="absolute top-[60%] right-[15%] w-2 h-2 bg-white rounded-full shadow-[0_0_10px_#FFF] animate-float-fast"></div>
+            <div class="absolute top-[30%] right-[20%] w-4 h-4 bg-waGreen/80 rounded-full shadow-[0_0_20px_#25D366] animate-float-medium"></div>
+            <span class="material-symbols-outlined absolute bottom-[20%] left-[20%] text-white/10 text-6xl animate-float-slow" style="font-size: 80px;">chat_bubble</span>
+            <span class="material-symbols-outlined absolute top-[15%] right-[30%] text-goldAccent/20 text-4xl animate-float-medium" style="font-size: 60px;">campaign</span>
+        </div>
+
+        <!-- Simulated Live Notifications -->
+        <div class="absolute right-4 md:right-10 top-1/3 flex flex-col gap-4 z-10 hidden lg:flex pointer-events-none">
+            <div class="mock-notification glass-card px-4 py-3 rounded-2xl flex items-center gap-3 w-64">
+                <div class="w-8 h-8 rounded-full bg-waGreen flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">person</span></div>
+                <div>
+                    <p class="text-xs text-white/60">New Message</p>
+                    <p class="text-sm font-semibold">"I want to order!"</p>
+                </div>
+            </div>
+            <div class="mock-notification glass-card px-4 py-3 rounded-2xl flex items-center gap-3 w-64 ml-10">
+                <div class="w-8 h-8 rounded-full bg-goldAccent flex items-center justify-center text-darkBase"><span class="material-symbols-outlined text-sm">shopping_cart</span></div>
+                <div>
+                    <p class="text-xs text-white/60">Conversion</p>
+                    <p class="text-sm font-semibold">Link clicked (45s ago)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full mt-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-goldAccent/30 bg-goldAccent/5 text-xs font-semibold uppercase tracking-widest text-goldLight mb-8 animate-slide-up-fade">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-waGreen opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-waGreen"></span>
+                </span>
+                Confi-influece
+            </div>
+            
+            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black leading-[1.05] tracking-tight text-white mb-6 opacity-0 animate-slide-up-fade" style="animation-delay: 0.1s;">
+                Promote Your Brand to <br class="hidden sm:block"> Thousands of <span class="text-gradient-gold">Engaged</span> <br class="hidden sm:block"> WhatsApp Users
+            </h1>
+            
+            <p class="text-base md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light mb-10 opacity-0 animate-slide-up-fade" style="animation-delay: 0.2s;">
+                Reach an active audience that doesn't just scroll-they engage, respond, click, and buy. Premium visibility for brands that want real results.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-slide-up-fade" style="animation-delay: 0.3s;">
+                <a href="#packages" class="bg-goldAccent text-darkBase px-8 py-4 md:px-10 md:py-4 rounded-full font-bold hover:bg-goldLight transition-all active:scale-95 shadow-[0_0_30px_rgba(229,176,92,0.3)] text-sm md:text-base flex items-center justify-center gap-2 w-full sm:w-auto">
+                    Book Promotion <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+                <a href="#packages" class="px-8 py-4 md:px-10 md:py-4 rounded-full font-medium text-white border border-white/20 hover:bg-white/10 transition-all text-sm md:text-base flex items-center justify-center w-full sm:w-auto">
+                    View Rates
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Premium Trust Bar -->
+    <section class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 -mt-10 md:-mt-16">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div class="glass-card p-5 md:p-6 rounded-2xl md:rounded-3xl flex flex-col justify-center reveal">
+                <span class="text-2xl md:text-3xl mb-2 block">👥</span>
+                <p class="font-display text-2xl md:text-4xl font-bold text-white mb-1"><span class="counter" data-target="3000">0</span>+</p>
+                <p class="text-xs md:text-sm text-white/50 font-medium">WhatsApp Audience</p>
+            </div>
+            <div class="glass-card p-5 md:p-6 rounded-2xl md:rounded-3xl flex flex-col justify-center reveal" style="transition-delay: 0.1s;">
+                <span class="text-2xl md:text-3xl mb-2 block">👀</span>
+                <p class="font-display text-2xl md:text-4xl font-bold text-white mb-1">500-1K</p>
+                <p class="text-xs md:text-sm text-white/50 font-medium">Average Status Views</p>
+            </div>
+            <div class="glass-card p-5 md:p-6 rounded-2xl md:rounded-3xl flex flex-col justify-center reveal" style="transition-delay: 0.2s;">
+                <span class="text-2xl md:text-3xl mb-2 block">📈</span>
+                <p class="font-display text-2xl md:text-4xl font-bold text-white mb-1"><span class="counter" data-target="70">0</span>%</p>
+                <p class="text-xs md:text-sm text-white/50 font-medium">Average Engagement</p>
+            </div>
+            <div class="glass-card p-5 md:p-6 rounded-2xl md:rounded-3xl flex flex-col justify-center reveal glass-gold" style="transition-delay: 0.3s;">
+                <span class="text-2xl md:text-3xl mb-2 block">⚡</span>
+                <p class="font-display text-2xl md:text-4xl font-bold text-goldAccent mb-1">Fast</p>
+                <p class="text-xs md:text-sm text-goldLight/70 font-medium">Delivery & Execution</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why WhatsApp (Split Section) -->
+    <section class="py-20 md:py-32 px-4 sm:px-6 relative z-10 w-full">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Left: Graphic -->
+            <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-[40px] border border-panelBorder bg-panelDark overflow-hidden flex items-center justify-center reveal group">
+                <!-- Abstract Glow Graphic -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#3D2314] to-darkBase z-0"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-waGreen/20 rounded-full blur-[60px] group-hover:scale-110 transition-transform duration-700 z-0"></div>
+                
+                <!-- Central Element -->
+                <div class="relative z-10 glass-card w-48 h-64 md:w-64 md:h-80 rounded-[30px] border border-white/10 flex flex-col p-4 shadow-2xl">
+                    <div class="w-full flex justify-between items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-goldLight to-goldAccent"></div>
+                        <span class="material-symbols-outlined text-white/50">more_horiz</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-3/4 h-3 rounded-full bg-white/20"></div>
+                        <div class="w-full h-3 rounded-full bg-white/10"></div>
+                        <div class="w-5/6 h-3 rounded-full bg-white/10"></div>
+                    </div>
+                    <div class="mt-auto self-end bg-waGreen text-white px-4 py-2 rounded-2xl rounded-tr-sm text-xs font-bold">Buy Now</div>
+                </div>
+            </div>
+
+            <!-- Right: Copy -->
+            <div class="reveal">
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Why Businesses <br><span class="text-gradient-gold">Advertise With Me</span></h2>
+                <p class="text-white/60 text-lg mb-10 font-light">Skip the algorithm. Reach buyers directly where they spend most of their time.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">trending_up</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Higher Engagement</h4>
+                            <p class="text-sm text-white/50 font-light">Beats most social platforms in open rates.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">visibility</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Direct Visibility</h4>
+                            <p class="text-sm text-white/50 font-light">No fighting feeds. Direct to their inbox.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">verified</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Organic Trust</h4>
+                            <p class="text-sm text-white/50 font-light">They trust my recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">groups</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Community-Based</h4>
+                            <p class="text-sm text-white/50 font-light">A loyal audience built over time.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">forum</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Real Conversations</h4>
+                            <p class="text-sm text-white/50 font-light">Leads to faster conversion rates.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-panelDark border border-panelBorder flex items-center justify-center shrink-0 text-goldAccent">
+                            <span class="material-symbols-outlined text-xl">my_location</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Targeted Exposure</h4>
+                            <p class="text-sm text-white/50 font-light">Reach active buyers directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Should Advertise (Icon Grid) -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 border-y border-panelBorder bg-panelDark w-full">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-white mb-12 reveal">Perfect Audience Match For</h2>
+            
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 reveal">
+                <!-- Pills -->
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">devices</span> Digital Products</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">checkroom</span> Fashion Brands</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">restaurant</span> Restaurants</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">spa</span> Skincare</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">event</span> Events</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">real_estate_agent</span> Real Estate</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">psychology</span> Coaches</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">app_shortcut</span> Apps</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">computer</span> Tech & Fintech</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">school</span> Training Programs</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">storefront</span> Small Businesses</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">link</span> Affiliate Products</div>
+                <div class="px-5 py-3 rounded-full border border-white/5 bg-darkBase text-white/80 text-sm font-medium flex items-center gap-2 hover:border-goldAccent transition-colors"><span class="material-symbols-outlined text-goldAccent text-lg">volunteer_activism</span> NGOs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Packages (Pricing) -->
+    <section id="packages" class="py-24 md:py-32 px-4 sm:px-6 relative z-10 w-full">
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-[#3D2314]/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Promotion Packages</h2>
+                <p class="text-white/50 text-lg">Transparent pricing. Premium delivery.</p>
+            </div>
+
+            <!-- Top Row: 3 Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
+                <!-- Starter -->
+                <div class="glass-card p-8 rounded-3xl border border-white/10 hover:border-white/30 transition-colors flex flex-col reveal">
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Starter</h3>
+                    <p class="text-white/50 text-sm mb-6">Perfect for a quick shoutout.</p>
+                    <div class="mb-8">
+                        <span class="text-3xl font-bold text-white">₦5,000</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 1 WhatsApp Post</li>
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 24 Hours Duration</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors mt-auto">Book Now</button>
+                </div>
+
+                <!-- Growth (Best Value) -->
+                <div class="glass-card p-8 rounded-3xl border border-goldAccent/40 bg-gradient-to-b from-[#3D2314]/30 to-transparent relative flex flex-col reveal" style="transition-delay: 0.1s;">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-goldAccent text-darkBase text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Best Value</div>
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Growth</h3>
+                    <p class="text-white/50 text-sm mb-6">Maximize visibility over days.</p>
+                    <div class="mb-8">
+                        <span class="text-3xl font-bold text-goldAccent">₦20,000</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 3 WhatsApp Posts</li>
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> Spread delivery</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-full bg-goldAccent text-darkBase font-bold hover:bg-goldLight transition-colors mt-auto shadow-[0_0_20px_rgba(229,176,92,0.2)]">Book Now</button>
+                </div>
+
+                <!-- Weekly -->
+                <div class="glass-card p-8 rounded-3xl border border-white/10 hover:border-white/30 transition-colors flex flex-col reveal" style="transition-delay: 0.2s;">
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Weekly</h3>
+                    <p class="text-white/50 text-sm mb-6">Consistent week-long exposure.</p>
+                    <div class="mb-8">
+                        <span class="text-3xl font-bold text-white">₦30,000</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> Daily Posts</li>
+                        <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 7 Days Duration</li>
+                    </ul>
+                    <button class="w-full py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors mt-auto">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Bottom Row: 2 Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                <!-- Biweekly -->
+                <div class="glass-card p-8 md:p-10 rounded-3xl border border-white/10 hover:border-white/30 transition-colors flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left reveal">
+                    <div class="flex-1">
+                        <h3 class="font-display text-2xl font-bold text-white mb-2">Biweekly</h3>
+                        <p class="text-white/50 text-sm mb-6">Sustained campaign for launches.</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-white">₦60,000</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full border-t sm:border-t-0 sm:border-l border-white/10 pt-6 sm:pt-0 sm:pl-8 flex flex-col">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> Daily Posts</li>
+                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 14 Days Duration</li>
+                        </ul>
+                        <button class="w-full py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors mt-auto">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Monthly (Featured) -->
+                <div class="glass-card p-8 md:p-10 rounded-3xl border-2 border-goldAccent/60 bg-gradient-to-tr from-[#3D2314]/40 to-transparent flex flex-col sm:flex-row gap-8 items-center sm:items-start text-center sm:text-left animate-pulse-glow reveal" style="transition-delay: 0.1s;">
+                    <div class="flex-1 relative">
+                        <div class="absolute -top-12 sm:-top-14 -left-2 sm:-left-4 text-[80px] sm:text-[100px] text-goldAccent/10 material-symbols-outlined pointer-events-none">star</div>
+                        <h3 class="font-display text-3xl font-bold text-white mb-2">Monthly</h3>
+                        <p class="text-goldLight/70 text-sm mb-6">Brand dominance and full takeover.</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-goldAccent">₦150,000</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full border-t sm:border-t-0 sm:border-l border-white/10 pt-6 sm:pt-0 sm:pl-8 flex flex-col">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> Daily Strategic Posts</li>
+                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> 30 Days Duration</li>
+                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-goldAccent text-lg">check_circle</span> Priority Support</li>
+                        </ul>
+                        <button class="w-full py-4 rounded-full bg-goldAccent text-darkBase font-bold hover:bg-goldLight transition-colors mt-auto">Secure Monthly Slot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Process & What You Get -->
+    <section class="py-20 md:py-32 px-4 sm:px-6 bg-panelDark border-y border-panelBorder w-full">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24">
+            
+            <!-- Process Timeline -->
+            <div class="reveal">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-10">Campaign Process</h2>
+                <div class="relative border-l border-white/10 ml-4 space-y-10">
+                    <div class="relative pl-8 timeline-dot">
+                        <h4 class="font-bold text-white text-lg">Submit Details</h4>
+                        <p class="text-sm text-white/50 mt-1">Send your creatives, links, and goals.</p>
+                    </div>
+                    <div class="relative pl-8 timeline-dot">
+                        <h4 class="font-bold text-white text-lg">Review</h4>
+                        <p class="text-sm text-white/50 mt-1">Quick quality check for optimal conversion.</p>
+                    </div>
+                    <div class="relative pl-8 timeline-dot">
+                        <h4 class="font-bold text-white text-lg">Payment</h4>
+                        <p class="text-sm text-white/50 mt-1">Secure your slot via bank transfer/link.</p>
+                    </div>
+                    <div class="relative pl-8 timeline-dot">
+                        <h4 class="font-bold text-white text-lg">Campaign Goes Live</h4>
+                        <p class="text-sm text-white/50 mt-1">Your brand is broadcasted to thousands.</p>
+                    </div>
+                    <div class="relative pl-8 timeline-dot">
+                        <h4 class="font-bold text-white text-lg">Performance Report</h4>
+                        <p class="text-sm text-white/50 mt-1">Receive view counts and engagement metrics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What You Get -->
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-10">What You Get</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">palette</span>
+                        <span class="text-sm font-medium">High-quality placement</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">ads_click</span>
+                        <span class="text-sm font-medium">Strategic targeting</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">visibility</span>
+                        <span class="text-sm font-medium">Audience visibility</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">bolt</span>
+                        <span class="text-sm font-medium">Fast publishing</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">forum</span>
+                        <span class="text-sm font-medium">Professional communication</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                        <span class="material-symbols-outlined text-goldAccent">verified</span>
+                        <span class="text-sm font-medium">Reliable delivery</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Performance (Animated Charts) -->
+    <section class="py-24 md:py-32 px-4 sm:px-6 relative z-10 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+            <div class="flex-1 reveal">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">Proven <span class="text-gradient-gold">Performance</span></h2>
+                <p class="text-white/60 text-lg mb-10">Numbers that translate directly to ROI for your brand.</p>
+                
+                <!-- Simple Bars -->
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-2">
+                            <span>Engagement</span>
+                            <span class="text-goldAccent"><span class="counter" data-target="70">0</span>%</span>
+                        </div>
+                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-goldAccent rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-2">
+                            <span>Response Rate</span>
+                            <span class="text-goldAccent"><span class="counter" data-target="85">0</span>%</span>
+                        </div>
+                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-goldAccent rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-2">
+                            <span>Campaign Completion</span>
+                            <span class="text-goldAccent"><span class="counter" data-target="100">0</span>%</span>
+                        </div>
+                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-goldAccent rounded-full" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Graphic -->
+            <div class="flex-1 relative w-full aspect-square md:aspect-auto md:h-[400px] flex items-center justify-center reveal" style="transition-delay: 0.2s;">
+                <div class="absolute w-[300px] h-[300px] bg-waGreen/20 rounded-full blur-[80px]"></div>
+                <!-- Concentric animated circles -->
+                <div class="absolute w-64 h-64 border border-white/5 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                <div class="absolute w-48 h-48 border border-goldAccent/20 rounded-full flex items-center justify-center bg-panelDark shadow-2xl z-10">
+                    <div class="text-center">
+                        <span class="material-symbols-outlined text-4xl text-waGreen mb-2">trending_up</span>
+                        <p class="font-display text-3xl font-bold text-white"><span class="counter" data-target="3">0</span>K+</p>
+                        <p class="text-[10px] uppercase tracking-widest text-white/50">Active Reach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Brands Return -->
+    <section class="py-20 px-4 sm:px-6 bg-panelDark border-t border-panelBorder w-full">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-16 reveal">Why Brands Return</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 reveal" style="transition-delay: 0.1s;">
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">group_add</span>
+                    <h4 class="font-bold text-sm md:text-base">Real Audience</h4>
+                </div>
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">auto_graph</span>
+                    <h4 class="font-bold text-sm md:text-base">Quality Engagement</h4>
+                </div>
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">payments</span>
+                    <h4 class="font-bold text-sm md:text-base">Affordable Pricing</h4>
+                </div>
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">support_agent</span>
+                    <h4 class="font-bold text-sm md:text-base">Pro Communication</h4>
+                </div>
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">task_alt</span>
+                    <h4 class="font-bold text-sm md:text-base">Reliable Delivery</h4>
+                </div>
+                <div class="p-6 md:p-8 rounded-3xl border border-white/5 bg-darkBase flex flex-col items-center hover:border-goldAccent/30 transition-colors">
+                    <span class="material-symbols-outlined text-3xl text-goldAccent mb-4">military_tech</span>
+                    <h4 class="font-bold text-sm md:text-base">Results-Focused</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 md:py-32 px-4 sm:px-6 relative z-10 w-full">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-white mb-12 reveal">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4 reveal" style="transition-delay: 0.1s;">
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        How long does a campaign last?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        It depends on the package you choose. Starter campaigns last 24 hours, while our premium packages can run from 7 to 30 days for maximum exposure.
+                    </div>
+                </details>
+                
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        Can I promote events?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        Yes! Event promotion performs exceptionally well on our network, driving rapid awareness and ticket sales.
+                    </div>
+                </details>
+
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        Can I promote digital products?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        Absolutely. Digital products, courses, and ebooks have very high conversion rates with our audience.
+                    </div>
+                </details>
+
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        Can I book multiple weeks?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        Yes. Our Biweekly and Monthly packages are designed for sustained campaigns and offer the best return on investment.
+                    </div>
+                </details>
+
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        How soon can my campaign start?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        Once details and payment are confirmed, campaigns usually go live within 24 hours depending on queue availability.
+                    </div>
+                </details>
+
+                <details class="glass-card rounded-2xl group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-sm md:text-base">
+                        Do you reject promotions?
+                        <span class="transition group-open:rotate-180 material-symbols-outlined text-goldAccent">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-white/60 text-sm font-light leading-relaxed">
+                        Yes. To protect the trust of our audience, we do not promote scams, unethical schemes, or low-quality products. All submissions are reviewed.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Massive Premium CTA -->
+    <section class="py-24 px-4 sm:px-6 relative w-full overflow-hidden mb-10">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-[#3D2314] to-[#1A0F0A] border border-goldAccent/30 rounded-[40px] p-10 md:p-20 text-center relative shadow-[0_0_50px_rgba(229,176,92,0.15)] reveal">
+            <!-- Glow inside card -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-goldAccent/10 blur-[80px] pointer-events-none"></div>
+            
+            <h2 class="relative z-10 font-display text-3xl sm:text-5xl md:text-6xl font-black text-white mb-8 leading-[1.1]">
+                Ready to Put Your Brand in Front of <span class="text-gradient-gold">Thousands?</span>
+            </h2>
+            <p class="relative z-10 text-white/70 text-base md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Book Your WhatsApp Promotion Today and watch your visibility scale instantly.
+            </p>
+            <button class="relative z-10 bg-goldAccent text-darkBase px-10 py-5 rounded-full text-lg font-bold hover:bg-goldLight transition-all active:scale-95 shadow-[0_0_30px_rgba(229,176,92,0.4)] w-full sm:w-auto">
+                Reserve Your Slot
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-panelBorder bg-panelDark py-8 px-4 sm:px-6 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 text-center md:text-left">
+            <p>&copy; 2026 Confidence Udeh. All rights reserved.</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">Designed by <a href="https://qorv.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-300">QORV LTD</a></p>
+        </div>
+    </footer>
+
+    <!-- Intersection Observer & Counter Script -->
+    <script>
+        // Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Trigger counters if they exist inside the revealed element
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        if(!counter.classList.contains('counted')) {
+                            animateValue(counter, 0, parseInt(counter.getAttribute('data-target')), 2000);
+                            counter.classList.add('counted');
+                        }
+                    });
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Smooth reveal for counters
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                // easeOutQuart
+                const easeProgress = 1 - Math.pow(1 - progress, 4);
+                
+                let current = Math.floor(easeProgress * (end - start) + start);
+                // Format with commas if over 999
+                obj.innerHTML = current.toLocaleString();
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    obj.innerHTML = end.toLocaleString();
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+    </script>
+</body>
+</html>
